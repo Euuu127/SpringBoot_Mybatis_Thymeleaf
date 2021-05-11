@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
+<head th:include="fragments/default :: head">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-<h1>index Page</h1>
-
-<div th:replace="/fragments/default :: header"></div>
-
-
+<div th:include="/fragments/default :: header"></div>
+<div th:replace="/fragments/default :: jumbo"></div>
+<h1>Member Join Page</h1>
 <footer th:replace="/fragments/default :: footer"></footer>
 </body>
 </html>
