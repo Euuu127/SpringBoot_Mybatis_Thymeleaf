@@ -2,26 +2,25 @@ package com.csm.s1.board;
 
 import java.util.List;
 
+import com.csm.s1.util.Pager;
+
 public interface BoardMapper {
-	
-	//list
-	public List<BoardVO> getList() throws Exception;
-	
+
+	//List
+	public List<BoardVO> getList(Pager pager)throws Exception;
 	//count
-	public Long getTotalCount()throws Exception;
-	
-	//select
+	public Long getTotalCount(Pager pager)throws Exception;
+	//Select
 	public BoardVO getSelect(BoardVO boardVO)throws Exception;
-	
-	//insert
+	//Insert
 	public int setInsert(BoardVO boardVO)throws Exception;
-	
-	//update
+	//FileInsert
+	public int setFileInsert(BoardFileVO boardFileVO)throws Exception;
+
+	//Update
 	public int setUpdate(BoardVO boardVO)throws Exception;
-	
-	//hitupdate
+	//HitUpdate
 	public int setHitUpdate(BoardVO boardVO)throws Exception;
-	
-	//delete
+	//Delete
 	public int setDelete(BoardVO boardVO)throws Exception;
 }

@@ -2,21 +2,23 @@ package com.csm.s1.board;
 
 import java.util.List;
 
+import org.springframework.web.multipart.MultipartFile;
+
+import com.csm.s1.util.Pager;
+
 public interface BoardService {
+	//List
+	public List<BoardVO> getList(Pager pager)throws Exception;
 
-	//list
-	public List<BoardVO> getList() throws Exception;
-
-	//select
+	//Select
 	public BoardVO getSelect(BoardVO boardVO)throws Exception;
 
-	//insert
-	public int setInsert(BoardVO boardVO)throws Exception;
+	//Insert
+	public int setInsert(BoardVO boardVO, MultipartFile [] files)throws Exception;
 
-	//update
+	//Update
 	public int setUpdate(BoardVO boardVO)throws Exception;
 
-	//delete
+	//Delete
 	public int setDelete(BoardVO boardVO)throws Exception;
-
 }
